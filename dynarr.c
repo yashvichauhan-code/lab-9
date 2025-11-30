@@ -14,20 +14,13 @@ int main(){
     scanf("%d", &num);
     printf("enter index: ");
     scanf("%d", &index);
-    int i= 0, j= n - 1;
     arr=(int*)realloc(arr,(n+1)*sizeof(int));
     for (int i = n; i >= index; i--){
         arr[i] = arr[i - 1];
     }
     arr[index-1]=num;
     n++;
-    //while (i<j) {
-    //    int x = arr[i];
-    //    arr[i] = arr[j];
-    //    arr[j] = x;
-    //    i++;
-    //    j--;
-    //}
+
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
