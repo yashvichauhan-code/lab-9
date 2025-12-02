@@ -30,23 +30,7 @@ int main(){
 
     struct class *s = (struct class *)malloc(n* sizeof(struct class));
 
-   for (int i = 0; i < n; i++) {
-        printf("enter name: ");
-        scanf(" %[^\n]", s[i].name);
-        printf("enter roll no: ");
-        scanf("%d", &s[i].rollno);
-        printf("enter percentage: ");
-        scanf("%f", &s[i].percent);
-    }
-    sort(s, n);
-    printf("\n\n students from highest to lowest percenage \n");
-    printf("                       -                         \n");
-    for(int i=0; i<n; i++){
-        printf("name: %s\t", s[i].name);
-        printf("roll no: %d\t", s[i].rollno);
-        printf("percentage: %.3f\t\n", s[i].percent);
-    }
-
+   
     free(s);
 
     return 0;
